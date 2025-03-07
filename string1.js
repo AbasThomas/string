@@ -156,16 +156,35 @@ function left2(str){
 function right2(str){
     return str.substring(str.length -2 ) + str.substring(0 , str.length - 2)
   }
-
+//   String-1 -- theEnd
+//   Given a string, return a string length 1 from its front, unless front is false, in which case return a string length 1 from its back. The string will be non-empty.
+  
+//   Examples
+  
+//   theEnd('Hello', true) → H
+//   theEnd('Hello', false) → o
+//   theEnd('oh', true) → o
   function theEnd(str, front){
-    // return str.substring(str.length-2) ? front == true : str.substring(1)
     if (front == true)
-        return str.substring(str.charAt(1));
-    else(front == false)
-        return str.substring(1);
-    
+            return str.substring(0,1) + str.substring(5);
+         else(front == false)
+            return str.substring(str.length - 1 );
+    }
+// /  console.log (theEnd( "hello", true));
+  
+// String-1 -- withoutEnd2
+// Given a string, return a version without both the first and last char of the string. The string may be any length, including 0.
+
+// Examples
+
+// withoutEnd2('Hello') → ell
+// withoutEnd2('abc') → b
+// withoutEnd2('ab') →
+
+
+function withoutEnd2(str){
+    return str.substring(1, str.length -1)
   }
 
-  console.log (theEnd( "hello", true));
-  
+// console.log(withoutEnd2("a"));
 
