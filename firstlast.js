@@ -6,12 +6,6 @@
 // firstLast6([1, 2, 6]) → true
 // firstLast6([6, 1, 2, 3]) → true
 // firstLast6([13, 6, 1, 2, 3]) → false
-
 function firstLast6(nums){
-    if (nums.at(firstLast6.length - 1).includes(6) || nums[0].includes(6)){
-        return true;
-    }
-    
+    return nums[0] === 6 || nums[nums.length - 1] === 6;
 }
-
-console.log(firstLast6([1, 2, 6])); 
