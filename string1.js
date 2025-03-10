@@ -188,3 +188,88 @@ function withoutEnd2(str){
 
 // console.log(withoutEnd2("a"));
 
+function middleTwo(str){
+  if (str. length > 2){
+    return str.substring(Math.floor(str.length / 2)-1 , Math.floor(str.length / 2) +1 );
+  }
+}
+
+// console.log(middleTwo("abcdefght")); 
+
+// String-1 -- endsLy
+// Given a string, return true if it ends in "ly".
+
+// Examples
+
+// endsLy('oddly') → true
+// endsLy('y') → false
+// endsLy('oddl') → false
+function endsLy(str){
+    if (str.substring( 4,5).includes("ly"))
+      return true;
+    else 
+    return false;
+}
+
+// console.log(endsLy("odlydly"));
+
+// // String-1 -- nTwice
+// Given a string and an int n, return a string made of the first and last n chars from the string. The string length will be at least n.
+
+// Examples
+
+// nTwice('hello', 2) → helo
+// nTwice('Chocolate', 3) → Choate
+// nTwice('Chocolate', 1) → Ce
+function nTwice(str, n){
+    if (str.length > 2){
+      return str.substring(0, n) + str.substring(str.length - n);
+    }
+    else{
+      return str;
+    }
+}
+
+// console.log(nTwice("abcdefg", 2));
+
+function twoChar(str, index){
+  if (str.charAt(index)){
+    return str.substring(str, index)
+  }
+  else if (str.charAt(index) > str.length){
+    return "Invalid index";
+  }
+  
+}
+
+console.log(twoChar("abc", 3));
+// function twoChar(str, index){
+//   if(index < 0 || index >= str.length -1 ){
+//     return str.substring(0,2)
+// }else {
+//   return str.substring(index,index+2)
+// }
+
+// }
+
+// a function that caplitalizes the first letter of  a sting 
+//  function capitalize(str) {
+//     let result = [];
+//     let newstr = str.split(" ");
+//     for (let word of newstr){
+//       result.push(word[0].toupperCase() + word.slice(1));
+//     }
+//     return result.join(" ");
+
+//  }
+
+//  console.log(capitalize(" gerald is  a boy"));
+ 
+
+ function reverseInt(number){
+   let newstr = number.toString().split('').reverse().join('');
+   return parseInt(newstr) * Math.sign(number);
+ }
+ let ans = reverseInt(786)
+ console.log(ans);
+ 
